@@ -59,7 +59,7 @@ public class ValidationUtils {
 	}
 
 	public boolean isValidBatchReleaseTime(Long batchReleaseTime) throws BadBatchReleaseTimeException {
-		if (batchReleaseTime % batchLength != 0) {
+		if (batchReleaseTime == null || batchReleaseTime % batchLength != 0) {
 			throw new BadBatchReleaseTimeException();
 		}
 		// hardcoded date so that the fuzzing corpus does not get invalidated over time
