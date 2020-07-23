@@ -1,0 +1,19 @@
+{
+  "name": "3b91bd59",
+  "fileName": ".",
+  "fileContent": null,
+  "requestChain": {
+    "requests": [
+      {
+        "method": "POST",
+        "uri": "/v1/gaen/exposed",
+        "headers": {
+        },
+        "contentType": "APPLICATION_JSON",
+        "body": "{}",
+        "isFixed": false,
+        "webControllerId": "772282204"
+      }
+    ]
+  }
+}

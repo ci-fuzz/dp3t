@@ -1,0 +1,19 @@
+{
+  "name": "d1b18c83",
+  "fileName": ".",
+  "fileContent": null,
+  "requestChain": {
+    "requests": [
+      {
+        "method": "POST",
+        "uri": "/v1/gaen/exposednextday",
+        "headers": {
+        },
+        "contentType": "APPLICATION_JSON",
+        "body": "{}",
+        "isFixed": false,
+        "webControllerId": "1247229394"
+      }
+    ]
+  }
+}

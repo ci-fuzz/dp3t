@@ -1,0 +1,19 @@
+{
+  "name": "fb753c73",
+  "fileName": ".",
+  "fileContent": null,
+  "requestChain": {
+    "requests": [
+      {
+        "method": "POST",
+        "uri": "/v1/exposed",
+        "headers": {
+        },
+        "contentType": "APPLICATION_JSON",
+        "body": "{}",
+        "isFixed": false,
+        "webControllerId": "-608625832"
+      }
+    ]
+  }
+}

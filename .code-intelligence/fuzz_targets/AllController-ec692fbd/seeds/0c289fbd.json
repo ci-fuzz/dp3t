@@ -1,0 +1,19 @@
+{
+  "name": "0c289fbd",
+  "fileName": ".",
+  "fileContent": null,
+  "requestChain": {
+    "requests": [
+      {
+        "method": "GET",
+        "uri": "/v1/exposed/%FUZZ%1",
+        "headers": {
+        },
+        "contentType": "TEXT_HTML",
+        "body": "",
+        "isFixed": false,
+        "webControllerId": "298456884"
+      }
+    ]
+  }
+}

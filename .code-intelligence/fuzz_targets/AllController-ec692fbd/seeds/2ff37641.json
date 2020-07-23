@@ -1,0 +1,19 @@
+{
+  "name": "2ff37641",
+  "fileName": ".",
+  "fileContent": null,
+  "requestChain": {
+    "requests": [
+      {
+        "method": "GET",
+        "uri": "/v1/exposedjson/%FUZZ%1",
+        "headers": {
+        },
+        "contentType": "TEXT_HTML",
+        "body": "",
+        "isFixed": false,
+        "webControllerId": "316076921"
+      }
+    ]
+  }
+}
