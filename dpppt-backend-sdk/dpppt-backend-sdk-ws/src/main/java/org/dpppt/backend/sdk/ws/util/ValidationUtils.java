@@ -62,10 +62,11 @@ public class ValidationUtils {
 		if (batchReleaseTime % batchLength != 0) {
 			throw new BadBatchReleaseTimeException();
 		}
-		if (batchReleaseTime > OffsetDateTime.now().withOffsetSameInstant(ZoneOffset.UTC).toInstant().toEpochMilli()) {
+		// hardcoded date so that the fuzzing corpus does not get invalidated over time
+		if (batchReleaseTime > OffsetDateTime.parse("2020-12-03T12:50:31+00:00").withOffsetSameInstant(ZoneOffset.UTC).toInstant().toEpochMilli()) {
 			return false;
 		}
-		if (batchReleaseTime < OffsetDateTime.now().withOffsetSameInstant(ZoneOffset.UTC).minus(retentionPeriod)
+		if (batchReleaseTime < OffsetDateTime.parse("2020-12-03T12:50:31+00:00").withOffsetSameInstant(ZoneOffset.UTC).minus(retentionPeriod)
 				.toInstant().toEpochMilli()) {
 			return false;
 		}

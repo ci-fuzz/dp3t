@@ -1,10 +1,6 @@
 {
-  "name": "AllController-ec692fbd",
+  "name": "AllController-ae4f0ca2",
   "displayName": "AllController",
-  "path": "FuzzTarget_AllController.java",
-  "runArguments": [
-    "-DSpringGrammar"
-  ],
   "javaWebApp": {
     "webApplication": {
       "applicationName": "Application",
@@ -23,8 +19,12 @@
         "/v1/gaen/exposedjson/{keyDate}",
         "/v1/gaen/exposednextday"
       ],
-      "runArguments": [
-        ""
+      "spiderOptions": {
+
+      },
+      "detectedFrameworks": [
+        "SPRING_BOOT",
+        "SPRING"
       ]
     },
     "exceptionPolicy": {
@@ -59,7 +59,6 @@
         }
       ]
     },
-    "setupRequestsFileContent": "{}",
     "jars": [
       "dpppt-backend-sdk/dpppt-backend-sdk-ws/target/dpppt-backend-sdk-ws.jar"
     ],

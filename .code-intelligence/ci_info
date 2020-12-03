@@ -379,9 +379,6 @@
             "/v1/gaen/exposedjson/{keyDate}",
             "/v1/gaen/exposednextday"
           ],
-          "runArguments": [
-            ""
-          ],
           "webControllerDb": {
             "webControllerInfos": [
               {
@@ -708,7 +705,14 @@
               }
             ],
             "baseUrl": "http://127.0.0.1:8080"
-          }
+          },
+          "spiderOptions": {
+
+          },
+          "detectedFrameworks": [
+            "SPRING_BOOT",
+            "SPRING"
+          ]
         }
       ],
       "defaultSetupRequestsFileContent": "{}",
@@ -753,21 +757,12 @@
       }
     }
   },
-  "location": {
-    "localPath": "/home/simon/git/dp3t-sdk-backend-mirror"
-  },
   "projectEnvironment": {
     "dockerBuild": {
-      "name": "maven:3.6-jdk-11",
-      "auth": {
-
-      }
+      "name": "registry.gitlab.com/code-intelligence/core/builders/webgoat"
     },
     "dockerRun": {
-      "name": "maven:3.6-jdk-11",
-      "auth": {
-
-      }
+      "name": "registry.gitlab.com/code-intelligence/core/builders/webgoat"
     }
   }
 }
