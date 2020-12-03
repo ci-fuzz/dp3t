@@ -759,10 +759,10 @@
   },
   "projectEnvironment": {
     "dockerBuild": {
-      "name": "registry.gitlab.com/code-intelligence/core/builders/webgoat"
+      "name": "cifuzz/builders:maven"
     },
     "dockerRun": {
-      "name": "registry.gitlab.com/code-intelligence/core/builders/webgoat"
+      "name": "cifuzz/builders:maven"
     }
   }
 }
