@@ -8,8 +8,8 @@ on:
 
 env:
   PROJECT_NAME: dp3t
-  FUZZING_SERVER_ADDRESS: grpc-api.code-intelligence.com:443
-  DASHBOARD_ADDRESS: https://app.code-intelligence.com
+  FUZZING_SERVER_ADDRESS: grpc-api.demo.code-intelligence.com:443
+  DASHBOARD_ADDRESS: https://app.demo.code-intelligence.com
 
 jobs:
   fuzz_AllController:
