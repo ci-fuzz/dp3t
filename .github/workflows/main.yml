@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, demo_before_fix ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, demo_before_fix ]
 
 env:
   PROJECT_NAME: dp3t
