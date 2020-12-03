@@ -1,18 +1,18 @@
 {
-  "name": "fb753c73",
+  "name": "fa2120f6",
   "fileName": ".",
   "fileContent": null,
   "requestChain": {
     "requests": [
       {
         "method": "POST",
-        "uri": "/v1/exposed",
+        "uri": "/v1/gaen/exposednextday",
         "headers": {
         },
         "contentType": "APPLICATION_JSON",
         "body": "{}",
         "isFixed": false,
-        "webControllerId": "-608625832"
+        "webControllerId": "1247229394"
       }
     ]
   }

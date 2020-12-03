@@ -1,18 +1,18 @@
 {
-  "name": "0c289fbd",
+  "name": "39ef5dc3",
   "fileName": ".",
   "fileContent": null,
   "requestChain": {
     "requests": [
       {
         "method": "GET",
-        "uri": "/v1/exposed/%FUZZ%1",
+        "uri": "/v1/gaen/exposedjson/%FUZZ%1606989600000?publishedafter=%FUZZ%1606989600000",
         "headers": {
         },
         "contentType": "TEXT_HTML",
         "body": "",
         "isFixed": false,
-        "webControllerId": "298456884"
+        "webControllerId": "-2031396175"
       }
     ]
   }

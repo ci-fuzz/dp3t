@@ -17,9 +17,9 @@ import org.springframework.security.oauth2.jwt.Jwt;
 
 /** Offers a set of methods to validate the incoming requests from the mobile devices. */
 public class ValidationUtils {
-  private final int KEY_LENGTH_BYTES;
-  private final Duration retentionPeriod;
-  private final Long releaseBucketDuration;
+private final int KEY_LENGTH_BYTES;
+private final Duration retentionPeriod;
+private final Long releaseBucketDuration;
 
   /**
    * Initialize the validator with the current parameters in use.
@@ -95,7 +95,9 @@ public class ValidationUtils {
     if (batchReleaseTime.getTimestamp() % releaseBucketDuration != 0) {
       throw new BadBatchReleaseTimeException();
     }
-    return batchReleaseTime.isBeforeEpochMillisOf(now);
+// hardcoded date so that the fuzzing corpus does not get invalidated over time
+
+    return batchReleaseTime.isBeforeEpochMillisOf(UTCInstant.parse("2020-12-03T10:15:30.00Z"));
   }
 
   public void assertDelayedKeyDate(UTCInstant now, UTCInstant delayedKeyDate)

@@ -1,18 +1,18 @@
 {
-  "name": "3b91bd59",
+  "name": "ce05e762",
   "fileName": ".",
   "fileContent": null,
   "requestChain": {
     "requests": [
       {
         "method": "POST",
-        "uri": "/v1/gaen/exposed",
+        "uri": "/v1/exposed",
         "headers": {
         },
         "contentType": "APPLICATION_JSON",
-        "body": "{}",
+        "body": "{\"key\": \"dGVzdEtleTMyQnl0ZXMtLXRlc3RLZXkzMkJ5dGVzLS0=\", \"keyDate\": \"1589039479223\"}",
         "isFixed": false,
-        "webControllerId": "772282204"
+        "webControllerId": "-608625832"
       }
     ]
   }

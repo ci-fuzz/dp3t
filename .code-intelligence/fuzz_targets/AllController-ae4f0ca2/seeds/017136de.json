@@ -1,18 +1,18 @@
 {
-  "name": "ba4604b4",
+  "name": "017136de",
   "fileName": ".",
   "fileContent": null,
   "requestChain": {
     "requests": [
       {
         "method": "GET",
-        "uri": "/v1/gaen/buckets/%FUZZ%",
+        "uri": "/v1/exposedjson/%FUZZ%1606989600000",
         "headers": {
         },
         "contentType": "TEXT_HTML",
         "body": "",
         "isFixed": false,
-        "webControllerId": "-1023873145"
+        "webControllerId": "316076921"
       }
     ]
   }
