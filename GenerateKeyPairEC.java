@@ -15,7 +15,6 @@ import java.security.PublicKey;
 import java.util.Base64;
 import java.security.spec.ECGenParameterSpec;
 import java.io.StringWriter;
-
 import java.security.Security;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.util.io.pem.PemWriter;
