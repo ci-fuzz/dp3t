@@ -13,11 +13,21 @@ import org.springframework.web.context.WebApplicationContext;
 
 import com.codeintelligence.fuzzing.FuzzWeb;
 import com.codeintelligence.static_analysis.EndpointDetection;
+import com.codeintelligence.error_reporting.ErrorReportHandlerSingleton;
 
 import javax.annotation.PostConstruct;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.context.request.WebRequest;
+
 
 @Component
-public class FuzzTarget_AllController {
+@ControllerAdvice
+public class FuzzTarget_AllController extends ResponseEntityExceptionHandler {
 
     @Autowired
     private WebApplicationContext _webCtx;
@@ -83,4 +93,11 @@ public class FuzzTarget_AllController {
         }
         return fuzzWeb.doRequest(input);
     }
+
+	 @ExceptionHandler(value = { Exception.class })
+     protected ResponseEntity<Object> handleThrowable(Exception ex, WebRequest request) throws Exception{
+         System.err.println("Inside our handleThrowable");
+         ErrorReportHandlerSingleton.getInstance().handleException(ex);
+	 	throw(ex);
+     }
 }
