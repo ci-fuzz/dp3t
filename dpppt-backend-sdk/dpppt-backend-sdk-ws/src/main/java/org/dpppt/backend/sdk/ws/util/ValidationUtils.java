@@ -95,9 +95,8 @@ private final Long releaseBucketDuration;
     if (batchReleaseTime.getTimestamp() % releaseBucketDuration != 0) {
       throw new BadBatchReleaseTimeException();
     }
-// hardcoded date so that the fuzzing corpus does not get invalidated over time
-
-    return batchReleaseTime.isBeforeEpochMillisOf(UTCInstant.parse("2020-12-03T10:15:30.00Z"));
+    // hardcoded date so that the fuzzing corpus does not get invalidated over time
+    return batchReleaseTime.isBeforeEpochMillisOf(UTCInstant.parseDateTime("2020-12-03T10:15:30.00Z"));
   }
 
   public void assertDelayedKeyDate(UTCInstant now, UTCInstant delayedKeyDate)

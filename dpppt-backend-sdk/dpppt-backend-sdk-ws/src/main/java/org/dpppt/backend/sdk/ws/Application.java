@@ -20,7 +20,7 @@ import org.springframework.context.annotation.FilterType;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
-ComponentScan(basePackages = {"org.dpppt.backend.sdk.ws.config", "org.dpppt.backend.sdk.ws"},
+@ComponentScan(basePackages = {"org.dpppt.backend.sdk.ws.config", "org.dpppt.backend.sdk.ws"},
         excludeFilters = {@ComponentScan.Filter(type = FilterType.REGEX, pattern = {"org.dpppt.backend.sdk.ws.controller.*", "org.dpppt.backend.sdk.ws.util.*", "org.dpppt.backend.sdk.ws.security.*"})})
 @EnableAutoConfiguration(exclude = { SecurityAutoConfiguration.class, ManagementWebSecurityAutoConfiguration.class })
 @EnableWebMvc
