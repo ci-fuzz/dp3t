@@ -13,7 +13,7 @@ env:
 
 jobs:
   fuzz_AllController:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - id: start-fuzzing
         name: Build and Instrument
