@@ -748,9 +748,8 @@
           },
           {
             "enabled": true,
-            "exceptionPolicy": {
-              "exceptionMatcher": "EXCEPTION_STARTS_WITH",
-              "content": "DateTimeFormatter.java:2046DateTimeFormatter.java:2046"
+            "zapPolicy": {
+              "alert": "Information Disclosure - Debug Error Messages"
             }
           }
         ]

@@ -10,7 +10,7 @@
         "headers": {
         },
         "contentType": "APPLICATION_JSON",
-        "body": "{}",
+        "body": "{\"exposedKeys\":[null]}",
         "isFixed": false,
         "webControllerId": "1108597172"
       }
