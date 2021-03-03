@@ -76,11 +76,13 @@ public class FuzzTarget_AllController {
         }
     }
 
-    public static boolean fuzzerTestOneInput(byte[] input) throws Throwable {
+    public static void fuzzerTestOneInput(byte[] input) throws Throwable {
         if (fuzzWeb == null) {
             System.err.println("ERROR: fuzzRest is not initialized yet!");
-            return false;
+            throw new IllegalStateException("fuzzRest is not initialized yet!");
         }
-        return fuzzWeb.doRequest(input);
+        if (fuzzWeb.doRequest(input)) {
+            throw new IllegalStateException("Sending the request failed");
+        }
     }
 }
