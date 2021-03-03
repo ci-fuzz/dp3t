@@ -14,5 +14,20 @@
       "engine": "ZAP",
       "numberOfJobs": 1
     }
+  ],
+  "configuredTargets": [
+    {
+      "fuzzTarget": "AllController-ae4f0ca2",
+      "fuzzerRunConfigurations": [
+        {
+          "engine": "JAVA_LIBFUZZER",
+          "numberOfJobs": 1
+        },
+        {
+          "engine": "ZAP",
+          "numberOfJobs": 1
+        }
+      ]
+    }
   ]
 }
