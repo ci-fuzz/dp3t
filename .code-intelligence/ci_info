@@ -21,6 +21,8 @@
         "org.dpppt.backend.sdk.data.util",
         "org.dpppt.backend.sdk.model",
         "org.dpppt.backend.sdk.model.gaen",
+        "org.dpppt.backend.sdk.model.gaen.proto",
+        "org.dpppt.backend.sdk.model.gaen.proto.v2",
         "org.dpppt.backend.sdk.model.keycloak",
         "org.dpppt.backend.sdk.semver",
         "org.dpppt.backend.sdk.utils",
