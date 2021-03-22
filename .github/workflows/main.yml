@@ -2,14 +2,14 @@ name: CI
 
 on:
   push:
-    branches: [ master, demo_before_fix ]
+    branches: [ master, demo_before_fix, fixed_version ]
   pull_request:
-    branches: [ master, demo_before_fix ]
+    branches: [ master, demo_before_fix, fixed_version ]
 
 env:
   PROJECT_NAME: dp3t
-  FUZZING_SERVER_ADDRESS: grpc-api.demo.code-intelligence.com:443
-  DASHBOARD_ADDRESS: https://app.demo.code-intelligence.com
+  FUZZING_SERVER_ADDRESS: grpc-api.code-intelligence.com:443
+  DASHBOARD_ADDRESS: https://app.code-intelligence.com
 
 jobs:
   fuzz_AllController:
