@@ -8,8 +8,8 @@ on:
 
 env:
   PROJECT_NAME: dp3t
-  FUZZING_SERVER_ADDRESS: grpc-api.code-intelligence.com:443
-  DASHBOARD_ADDRESS: https://app.code-intelligence.com
+  FUZZING_SERVER_ADDRESS: grpc-api.beta.code-intelligence.com:443
+  DASHBOARD_ADDRESS: https://app.beta.code-intelligence.com
 
 jobs:
   fuzz_AllController:
@@ -17,7 +17,7 @@ jobs:
     steps:
       - id: start-fuzzing
         name: Build and Instrument
-        uses: CodeIntelligenceTesting/github-actions/start-fuzzing@master
+        uses: CodeIntelligenceTesting/github-actions/start-fuzzing@v3
         with:
           ci_fuzz_api_token: ${{ secrets.CI_FUZZ_API_TOKEN }}
           project: ${{ env.PROJECT_NAME }}
@@ -26,7 +26,7 @@ jobs:
           fuzzing_server_address: ${{ env.FUZZING_SERVER_ADDRESS }}
       - id: monitor-fuzzing
         name: Fuzzing
-        uses: CodeIntelligenceTesting/github-actions/monitor-fuzzing@master
+        uses: CodeIntelligenceTesting/github-actions/monitor-fuzzing@v3
         with:
           ci_fuzz_api_token: ${{ secrets.CI_FUZZ_API_TOKEN }}
           project: ${{ env.PROJECT_NAME }}
@@ -39,7 +39,7 @@ jobs:
           dashboard_address: ${{ env.DASHBOARD_ADDRESS }}
       - id: report-coverage
         name: Report Coverage
-        uses: CodeIntelligenceTesting/github-actions/report-coverage@master
+        uses: CodeIntelligenceTesting/github-actions/report-coverage@v3
         if: ${{ github.event_name == 'pull_request' && (success() || failure()) }}
         with:
           ci_fuzz_api_token: ${{ secrets.CI_FUZZ_API_TOKEN }}
