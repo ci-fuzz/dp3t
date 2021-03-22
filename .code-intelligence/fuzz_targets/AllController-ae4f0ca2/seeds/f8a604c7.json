@@ -6,7 +6,7 @@
     "requests": [
       {
         "method": "POST",
-        "uri": "/v1/exposedlist",
+        "uri": "/v2/exposedlist",
         "headers": {
         },
         "contentType": "APPLICATION_JSON",

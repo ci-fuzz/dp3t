@@ -6,7 +6,7 @@
     "requests": [
       {
         "method": "GET",
-        "uri": "/v1/gaen/buckets/03-12-20",
+        "uri": "/v1/gaen/buckets/2021-03-16",
         "headers": {
         },
         "contentType": "TEXT_HTML",

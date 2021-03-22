@@ -6,7 +6,7 @@
     "requests": [
       {
         "method": "GET",
-        "uri": "/v1",
+        "uri": "/v2",
         "headers": {
         },
         "contentType": "TEXT_HTML",

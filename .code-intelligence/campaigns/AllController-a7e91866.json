@@ -15,6 +15,7 @@
       "numberOfJobs": 1
     }
   ],
+  "skipInitialCorpus": true,
   "configuredTargets": [
     {
       "fuzzTarget": "AllController-ae4f0ca2",

@@ -6,7 +6,7 @@
     "requests": [
       {
         "method": "POST",
-        "uri": "/v1/gaen/exposednextday",
+        "uri": "/v2/gaen/exposednextday",
         "headers": {
         },
         "contentType": "APPLICATION_JSON",
