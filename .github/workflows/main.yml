@@ -34,7 +34,7 @@ jobs:
           repository: ${{ github.event.repository.name }}
           fuzzing_server_address: ${{ env.FUZZING_SERVER_ADDRESS }}
           dashboard_address: ${{ env.DASHBOARD_ADDRESS }}
-          timeout: ${{900}}
+          timeout: ${{7200}}
       - id: report-coverage
         name: Report Coverage
         uses: CodeIntelligenceTesting/github-actions/report-coverage@v3
