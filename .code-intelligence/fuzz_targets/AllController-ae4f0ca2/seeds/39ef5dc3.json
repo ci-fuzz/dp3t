@@ -6,7 +6,7 @@
     "requests": [
       {
         "method": "GET",
-        "uri": "/v1/gaen/exposedjson/%FUZZ%1606989600000?publishedafter=%FUZZ%1606989600000",
+        "uri": "/v1/gaen/exposedjson/%FUZZ%1615902606000?publishedafter=%FUZZ%1615902606000",
         "headers": {
         },
         "contentType": "TEXT_HTML",

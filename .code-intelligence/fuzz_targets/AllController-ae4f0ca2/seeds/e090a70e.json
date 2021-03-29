@@ -6,7 +6,7 @@
     "requests": [
       {
         "method": "GET",
-        "uri": "/v1/buckets/%FUZZ%",
+        "uri": "/v2/buckets/%FUZZ%",
         "headers": {
         },
         "contentType": "TEXT_HTML",
