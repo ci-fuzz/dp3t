@@ -16,15 +16,15 @@ jobs:
     steps:
       - id: start-fuzzing
         name: Build and Instrument
-        uses: CodeIntelligenceTesting/github-actions/start-fuzzing@v3
+        uses: CodeIntelligenceTesting/github-actions/start-fuzzing@master
         with:
           ci_fuzz_api_token: ${{ secrets.CI_FUZZ_API_TOKEN }}
-          test_collection: "projects/dp3t_git-e2be63c15818c8d2/campaigns/AllController-a7e91866"
+          test_collection: "projects/dp3t_git-cc9aec38a841e381/campaigns/AllController-a7e91866"
           git_reference: ${{ github.sha }}
           fuzzing_server_address: ${{ env.FUZZING_SERVER_ADDRESS }}          
       - id: monitor-fuzzing
         name: Fuzzing
-        uses: CodeIntelligenceTesting/github-actions/monitor-fuzzing@v3
+        uses: CodeIntelligenceTesting/github-actions/monitor-fuzzing@master
         with:
           ci_fuzz_api_token: ${{ secrets.CI_FUZZ_API_TOKEN }}
           test_collection_run: ${{ steps.start-fuzzing.outputs.test_collection_run }}
@@ -36,7 +36,7 @@ jobs:
           dashboard_address: ${{ env.DASHBOARD_ADDRESS }}
       - id: report-coverage
         name: Report Coverage
-        uses: CodeIntelligenceTesting/github-actions/report-coverage@v3
+        uses: CodeIntelligenceTesting/github-actions/report-coverage@master
         if: ${{ github.event_name == 'pull_request' && (success() || failure()) }}
         with:
           ci_fuzz_api_token: ${{ secrets.CI_FUZZ_API_TOKEN }}
