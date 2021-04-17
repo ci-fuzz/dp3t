@@ -39,7 +39,7 @@ public class FuzzTarget_AllController {
         System.getProperties().put("logging.level.org.springframework.web", "error");
         String[] springBootArgs = {};
         try {
-            Application.main(springBootArgs);
+            StartWebGoat.main(springBootArgs);
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException("Failed to start application.");
@@ -53,8 +53,8 @@ public class FuzzTarget_AllController {
     public static void main(String[] fuzzerArgs) {
         String webControllerDBPath = null;
         for (String arg : fuzzerArgs) {
-            if (arg.startsWith("--web-controller-db=")) {
-                webControllerDBPath = arg.replace("--web-controller-db=", "");
+            if (arg.startsWith("--web_controller_db=")) {
+                webControllerDBPath = arg.replace("--web_controller_db=", "");
             }
         }
         fuzzerInitialize(fuzzerArgs);
