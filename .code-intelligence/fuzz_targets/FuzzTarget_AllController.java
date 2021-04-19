@@ -39,7 +39,7 @@ public class FuzzTarget_AllController {
         System.getProperties().put("logging.level.org.springframework.web", "error");
         String[] springBootArgs = {};
         try {
-            StartWebGoat.main(springBootArgs);
+            Application.main(springBootArgs);
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException("Failed to start application.");
