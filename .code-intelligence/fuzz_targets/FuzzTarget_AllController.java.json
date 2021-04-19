@@ -1,6 +1,6 @@
 {
   "name": "AllController-ae4f0ca2",
-  "displayName": "AllController",
+  "displayName": "FuzzAllEndPoints",
   "javaWebApp": {
     "webApplication": {
       "applicationName": "Application",
