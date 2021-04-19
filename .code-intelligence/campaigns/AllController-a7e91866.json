@@ -1,7 +1,7 @@
 {
   "name": "AllController-a7e91866",
   "displayName": "FuzzAllEndPoints",
-  "maxRunTime": "1800s",
+  "maxRunTime": "7200s",
   "fuzzTargets": [
     "AllController-ae4f0ca2"
   ],
