@@ -1,17 +1,11 @@
 {
   "name": "e090a70e",
   "fileName": ".",
-  "fileContent": null,
   "requestChain": {
     "requests": [
       {
         "method": "GET",
         "uri": "/v1/buckets/%FUZZ%-900000000-01-01",
-        "headers": {
-        },
-        "contentType": "TEXT_HTML",
-        "body": "",
-        "isFixed": false,
         "webControllerId": "1431148465"
       }
     ]

@@ -1,17 +1,13 @@
 {
   "name": "ce05e762",
   "fileName": ".",
-  "fileContent": null,
   "requestChain": {
     "requests": [
       {
         "method": "POST",
         "uri": "/v1/exposed",
-        "headers": {
-        },
         "contentType": "APPLICATION_JSON",
         "body": "{\"key\": \"dGVzdEtleTMyQnl0ZXMtLXRlc3RLZXkzMkJ5dGVzLS0=\", \"keyDate\": \"1589039479223\"}",
-        "isFixed": false,
         "webControllerId": "-608625832"
       }
     ]
