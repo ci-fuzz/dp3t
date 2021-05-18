@@ -1,0 +1,393 @@
+{
+  "webApplications": [
+    {
+      "applicationName": "Application",
+      "package": "org.dpppt.backend.sdk.ws",
+      "artifact": "dpppt-backend-sdk/dpppt-backend-sdk-ws/target/dpppt-backend-sdk-ws.jar",
+      "controllers": [
+        "/v1",
+        "/v1/buckets/{dayDateStr}",
+        "/v1/exposed",
+        "/v1/exposed/{batchReleaseTime}",
+        "/v1/exposedjson/{batchReleaseTime}",
+        "/v1/exposedlist",
+        "/v1/gaen/buckets/{dayDateStr}",
+        "/v1/gaen/exposed",
+        "/v1/gaen/exposed/{keyDate}",
+        "/v1/gaen/exposedjson/{keyDate}",
+        "/v1/gaen/exposednextday"
+      ],
+      "webControllerDb": {
+        "webControllerInfos": [
+          {
+            "method": "GET",
+            "uri": "/v1",
+            "controllerClass": "org.dpppt.backend.sdk.ws.controller.DPPPTController",
+            "handlerFunctionName": "hello",
+            "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003cjava.lang.String\u003e org.dpppt.backend.sdk.ws.controller.DPPPTController.hello()",
+            "id": "-136316128"
+          },
+          {
+            "method": "POST",
+            "uri": "/v1/exposedlist",
+            "requestParameter": [
+              {
+                "name": "exposeeRequests",
+                "required": true,
+                "className": "class org.dpppt.backend.sdk.model.ExposeeRequestList",
+                "type": "REQUEST_BODY",
+                "bodyPojoRepresentation": {
+                  "nestedObjects": [
+                    {
+                      "typeName": "org.dpppt.backend.sdk.model.ExposeeRequestList",
+                      "fields": {
+                        "exposedKeys": {
+                          "typeName": "org.dpppt.backend.sdk.model.ExposedKey",
+                          "fieldType": "ARRAY_TYPE"
+                        },
+                        "fake": {
+                          "typeName": "java.lang.Integer",
+                          "isPrimitiveType": true
+                        }
+                      }
+                    },
+                    {
+                      "typeName": "org.dpppt.backend.sdk.model.ExposedKey",
+                      "fields": {
+                        "key": {
+                          "typeName": "java.lang.String",
+                          "isPrimitiveType": true
+                        },
+                        "keyDate": {
+                          "typeName": "long",
+                          "isPrimitiveType": true
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ],
+            "controllerClass": "org.dpppt.backend.sdk.ws.controller.DPPPTController",
+            "handlerFunctionName": "addExposee",
+            "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003cjava.lang.String\u003e org.dpppt.backend.sdk.ws.controller.DPPPTController.addExposee(org.dpppt.backend.sdk.model.ExposeeRequestList,java.lang.String,java.lang.Object) throws org.dpppt.backend.sdk.ws.security.ValidateRequest$InvalidDateException",
+            "id": "1108597172"
+          },
+          {
+            "method": "POST",
+            "uri": "/v1/exposed",
+            "requestParameter": [
+              {
+                "name": "exposeeRequest",
+                "required": true,
+                "className": "class org.dpppt.backend.sdk.model.ExposeeRequest",
+                "type": "REQUEST_BODY",
+                "bodyPojoRepresentation": {
+                  "nestedObjects": [
+                    {
+                      "typeName": "org.dpppt.backend.sdk.model.ExposeeRequest",
+                      "fields": {
+                        "authData": {
+                          "typeName": "org.dpppt.backend.sdk.model.ExposeeAuthData"
+                        },
+                        "isFake": {
+                          "typeName": "java.lang.Integer",
+                          "isPrimitiveType": true
+                        },
+                        "key": {
+                          "typeName": "java.lang.String",
+                          "isPrimitiveType": true
+                        },
+                        "keyDate": {
+                          "typeName": "long",
+                          "isPrimitiveType": true
+                        }
+                      }
+                    },
+                    {
+                      "typeName": "org.dpppt.backend.sdk.model.ExposeeAuthData",
+                      "fields": {
+                        "value": {
+                          "typeName": "java.lang.String",
+                          "isPrimitiveType": true
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ],
+            "controllerClass": "org.dpppt.backend.sdk.ws.controller.DPPPTController",
+            "handlerFunctionName": "addExposee",
+            "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003cjava.lang.String\u003e org.dpppt.backend.sdk.ws.controller.DPPPTController.addExposee(org.dpppt.backend.sdk.model.ExposeeRequest,java.lang.String,java.lang.Object) throws org.dpppt.backend.sdk.ws.security.ValidateRequest$InvalidDateException",
+            "id": "-608625832"
+          },
+          {
+            "method": "GET",
+            "uri": "/v1/exposedjson/{batchReleaseTime}",
+            "requestParameter": [
+              {
+                "name": "batchReleaseTime",
+                "required": true,
+                "className": "class java.lang.Long",
+                "type": "PATH_PARAM"
+              }
+            ],
+            "controllerClass": "org.dpppt.backend.sdk.ws.controller.DPPPTController",
+            "handlerFunctionName": "getExposedByDayDate",
+            "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003corg.dpppt.backend.sdk.model.ExposedOverview\u003e org.dpppt.backend.sdk.ws.controller.DPPPTController.getExposedByDayDate(java.lang.Long,org.springframework.web.context.request.WebRequest) throws org.dpppt.backend.sdk.ws.util.ValidationUtils$BadBatchReleaseTimeException",
+            "id": "316076921"
+          },
+          {
+            "method": "GET",
+            "uri": "/v1/exposed/{batchReleaseTime}",
+            "requestParameter": [
+              {
+                "name": "batchReleaseTime",
+                "required": true,
+                "className": "class java.lang.Long",
+                "type": "PATH_PARAM"
+              }
+            ],
+            "controllerClass": "org.dpppt.backend.sdk.ws.controller.DPPPTController",
+            "handlerFunctionName": "getExposedByBatch",
+            "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003corg.dpppt.backend.sdk.model.proto.Exposed$ProtoExposedList\u003e org.dpppt.backend.sdk.ws.controller.DPPPTController.getExposedByBatch(java.lang.Long,org.springframework.web.context.request.WebRequest) throws org.dpppt.backend.sdk.ws.util.ValidationUtils$BadBatchReleaseTimeException",
+            "id": "298456884"
+          },
+          {
+            "method": "GET",
+            "uri": "/v1/buckets/{dayDateStr}",
+            "requestParameter": [
+              {
+                "name": "dayDateStr",
+                "required": true,
+                "className": "class java.lang.String",
+                "type": "PATH_PARAM"
+              }
+            ],
+            "controllerClass": "org.dpppt.backend.sdk.ws.controller.DPPPTController",
+            "handlerFunctionName": "getListOfBuckets",
+            "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003corg.dpppt.backend.sdk.model.BucketList\u003e org.dpppt.backend.sdk.ws.controller.DPPPTController.getListOfBuckets(java.lang.String)",
+            "id": "1431148465"
+          },
+          {
+            "method": "POST",
+            "uri": "/v1/gaen/exposed",
+            "requestParameter": [
+              {
+                "name": "gaenRequest",
+                "required": true,
+                "className": "class org.dpppt.backend.sdk.model.gaen.GaenRequest",
+                "type": "REQUEST_BODY",
+                "bodyPojoRepresentation": {
+                  "nestedObjects": [
+                    {
+                      "typeName": "org.dpppt.backend.sdk.model.gaen.GaenRequest",
+                      "fields": {
+                        "delayedKeyDate": {
+                          "typeName": "java.lang.Integer",
+                          "isPrimitiveType": true
+                        },
+                        "gaenKeys": {
+                          "typeName": "org.dpppt.backend.sdk.model.gaen.GaenKey",
+                          "fieldType": "ARRAY_TYPE"
+                        }
+                      }
+                    },
+                    {
+                      "typeName": "org.dpppt.backend.sdk.model.gaen.GaenKey",
+                      "fields": {
+                        "fake": {
+                          "typeName": "java.lang.Integer",
+                          "isPrimitiveType": true
+                        },
+                        "keyData": {
+                          "typeName": "java.lang.String",
+                          "isPrimitiveType": true
+                        },
+                        "rollingPeriod": {
+                          "typeName": "java.lang.Integer",
+                          "isPrimitiveType": true
+                        },
+                        "rollingStartNumber": {
+                          "typeName": "java.lang.Integer",
+                          "isPrimitiveType": true
+                        },
+                        "transmissionRiskLevel": {
+                          "typeName": "java.lang.Integer",
+                          "isPrimitiveType": true
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ],
+            "controllerClass": "org.dpppt.backend.sdk.ws.controller.GaenController",
+            "handlerFunctionName": "addExposed",
+            "handlerFunctionSignature": "public java.util.concurrent.Callable\u003corg.springframework.http.ResponseEntity\u003cjava.lang.String\u003e\u003e org.dpppt.backend.sdk.ws.controller.GaenController.addExposed(org.dpppt.backend.sdk.model.gaen.GaenRequest,java.lang.String,java.lang.Object) throws org.dpppt.backend.sdk.ws.security.ValidateRequest$InvalidDateException",
+            "id": "772282204"
+          },
+          {
+            "method": "POST",
+            "uri": "/v1/gaen/exposednextday",
+            "requestParameter": [
+              {
+                "name": "gaenSecondDay",
+                "required": true,
+                "className": "class org.dpppt.backend.sdk.model.gaen.GaenSecondDay",
+                "type": "REQUEST_BODY",
+                "bodyPojoRepresentation": {
+                  "nestedObjects": [
+                    {
+                      "typeName": "org.dpppt.backend.sdk.model.gaen.GaenSecondDay",
+                      "fields": {
+                        "delayedKey": {
+                          "typeName": "org.dpppt.backend.sdk.model.gaen.GaenKey"
+                        },
+                        "fake": {
+                          "typeName": "java.lang.Integer",
+                          "isPrimitiveType": true
+                        }
+                      }
+                    },
+                    {
+                      "typeName": "org.dpppt.backend.sdk.model.gaen.GaenKey",
+                      "fields": {
+                        "fake": {
+                          "typeName": "java.lang.Integer",
+                          "isPrimitiveType": true
+                        },
+                        "keyData": {
+                          "typeName": "java.lang.String",
+                          "isPrimitiveType": true
+                        },
+                        "rollingPeriod": {
+                          "typeName": "java.lang.Integer",
+                          "isPrimitiveType": true
+                        },
+                        "rollingStartNumber": {
+                          "typeName": "java.lang.Integer",
+                          "isPrimitiveType": true
+                        },
+                        "transmissionRiskLevel": {
+                          "typeName": "java.lang.Integer",
+                          "isPrimitiveType": true
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ],
+            "controllerClass": "org.dpppt.backend.sdk.ws.controller.GaenController",
+            "handlerFunctionName": "addExposedSecond",
+            "handlerFunctionSignature": "public java.util.concurrent.Callable\u003corg.springframework.http.ResponseEntity\u003cjava.lang.String\u003e\u003e org.dpppt.backend.sdk.ws.controller.GaenController.addExposedSecond(org.dpppt.backend.sdk.model.gaen.GaenSecondDay,java.lang.String,java.lang.Object) throws org.dpppt.backend.sdk.ws.security.ValidateRequest$InvalidDateException",
+            "id": "1247229394"
+          },
+          {
+            "method": "GET",
+            "uri": "/v1/gaen/exposedjson/{keyDate}",
+            "requestParameter": [
+              {
+                "name": "keyDate",
+                "required": true,
+                "className": "class java.lang.Long",
+                "type": "PATH_PARAM"
+              },
+              {
+                "name": "publishedafter",
+                "className": "class java.lang.Long"
+              }
+            ],
+            "controllerClass": "org.dpppt.backend.sdk.ws.controller.GaenController",
+            "handlerFunctionName": "getExposedKeysAsJson",
+            "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003corg.dpppt.backend.sdk.model.gaen.GaenExposedJson\u003e org.dpppt.backend.sdk.ws.controller.GaenController.getExposedKeysAsJson(java.lang.Long,java.lang.Long,org.springframework.web.context.request.WebRequest) throws org.dpppt.backend.sdk.ws.util.ValidationUtils$BadBatchReleaseTimeException",
+            "id": "-2031396175"
+          },
+          {
+            "method": "GET",
+            "uri": "/v1/gaen/buckets/{dayDateStr}",
+            "requestParameter": [
+              {
+                "name": "dayDateStr",
+                "required": true,
+                "className": "class java.lang.String",
+                "type": "PATH_PARAM"
+              }
+            ],
+            "controllerClass": "org.dpppt.backend.sdk.ws.controller.GaenController",
+            "handlerFunctionName": "getBuckets",
+            "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003corg.dpppt.backend.sdk.model.gaen.DayBuckets\u003e org.dpppt.backend.sdk.ws.controller.GaenController.getBuckets(java.lang.String)",
+            "id": "-1023873145"
+          },
+          {
+            "method": "GET",
+            "uri": "/v1/gaen/exposed/{keyDate}",
+            "requestParameter": [
+              {
+                "name": "keyDate",
+                "required": true,
+                "className": "class java.lang.Long",
+                "type": "PATH_PARAM"
+              },
+              {
+                "name": "publishedafter",
+                "className": "class java.lang.Long"
+              }
+            ],
+            "controllerClass": "org.dpppt.backend.sdk.ws.controller.GaenController",
+            "handlerFunctionName": "getExposedKeys",
+            "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003cbyte[]\u003e org.dpppt.backend.sdk.ws.controller.GaenController.getExposedKeys(java.lang.Long,java.lang.Long,org.springframework.web.context.request.WebRequest) throws org.dpppt.backend.sdk.ws.util.ValidationUtils$BadBatchReleaseTimeException,java.io.IOException,java.security.InvalidKeyException,java.security.SignatureException,java.security.NoSuchAlgorithmException",
+            "id": "1497032917"
+          }
+        ],
+        "baseUrl": "http://127.0.0.1:8080"
+      },
+      "spiderOptions": {},
+      "detectedFrameworks": [
+        "SPRING_BOOT",
+        "SPRING"
+      ]
+    }
+  ],
+  "defaultSetupRequestsFileContent": "{}",
+  "projectExceptionPolicy": {
+    "policy": [
+      {
+        "enabled": true,
+        "responsePolicy": {
+          "responseMatcher": "CODE_STARTS_WITH",
+          "code": 2
+        }
+      },
+      {
+        "enabled": true,
+        "responsePolicy": {
+          "responseMatcher": "CODE_STARTS_WITH",
+          "code": 4
+        }
+      },
+      {
+        "enabled": true,
+        "responsePolicy": {
+          "code": 302
+        }
+      },
+      {
+        "enabled": true,
+        "exceptionPolicy": {
+          "Exception": "java.lang.IllegalArgumentException",
+          "exceptionStrategy": "STACKTRACE_CONTAINS",
+          "content": "org.springframework.web.util.UriComponentsBuilder"
+        }
+      },
+      {
+        "enabled": true,
+        "zapPolicy": {
+          "alert": "Information Disclosure - Debug Error Messages"
+        }
+      }
+    ]
+  }
+}

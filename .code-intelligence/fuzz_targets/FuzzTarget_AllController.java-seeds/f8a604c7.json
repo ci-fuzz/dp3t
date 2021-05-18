@@ -1,17 +1,13 @@
 {
   "name": "f8a604c7",
   "fileName": ".",
-  "fileContent": null,
   "requestChain": {
     "requests": [
       {
         "method": "POST",
         "uri": "/v1/exposedlist",
-        "headers": {
-        },
         "contentType": "APPLICATION_JSON",
         "body": "{\"exposedKeys\":[null]}",
-        "isFixed": false,
         "webControllerId": "1108597172"
       }
     ]

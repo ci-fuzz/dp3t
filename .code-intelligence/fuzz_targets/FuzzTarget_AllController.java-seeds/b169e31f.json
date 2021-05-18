@@ -1,17 +1,11 @@
 {
   "name": "b169e31f",
   "fileName": ".",
-  "fileContent": null,
   "requestChain": {
     "requests": [
       {
         "method": "GET",
         "uri": "/v1",
-        "headers": {
-        },
-        "contentType": "TEXT_HTML",
-        "body": "",
-        "isFixed": false,
         "webControllerId": "-136316128"
       }
     ]

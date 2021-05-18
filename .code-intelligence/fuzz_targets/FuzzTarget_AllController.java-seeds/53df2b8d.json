@@ -1,17 +1,11 @@
 {
   "name": "53df2b8d",
   "fileName": ".",
-  "fileContent": null,
   "requestChain": {
     "requests": [
       {
         "method": "GET",
         "uri": "/v1/gaen/buckets/%FUZZ%-900000000-01-01",
-        "headers": {
-        },
-        "contentType": "TEXT_HTML",
-        "body": "",
-        "isFixed": false,
         "webControllerId": "-1023873145"
       }
     ]

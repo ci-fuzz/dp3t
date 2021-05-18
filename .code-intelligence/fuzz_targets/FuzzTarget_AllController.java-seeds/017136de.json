@@ -1,17 +1,11 @@
 {
   "name": "017136de",
   "fileName": ".",
-  "fileContent": null,
   "requestChain": {
     "requests": [
       {
         "method": "GET",
         "uri": "/v1/exposedjson/%FUZZ%1606989600000",
-        "headers": {
-        },
-        "contentType": "TEXT_HTML",
-        "body": "",
-        "isFixed": false,
         "webControllerId": "316076921"
       }
     ]
