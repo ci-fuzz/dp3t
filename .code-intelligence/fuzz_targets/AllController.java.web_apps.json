@@ -1,0 +1,60 @@
+{
+  "webApplication": {
+    "applicationName": "Application",
+    "package": "org.dpppt.backend.sdk.ws",
+    "artifact": "dpppt-backend-sdk/dpppt-backend-sdk-ws/target/dpppt-backend-sdk-ws.jar",
+    "controllers": [
+      "/v1",
+      "/v1/buckets/{dayDateStr}",
+      "/v1/exposed",
+      "/v1/exposed/{batchReleaseTime}",
+      "/v1/exposedjson/{batchReleaseTime}",
+      "/v1/exposedlist",
+      "/v1/gaen/buckets/{dayDateStr}",
+      "/v1/gaen/exposed",
+      "/v1/gaen/exposed/{keyDate}",
+      "/v1/gaen/exposedjson/{keyDate}",
+      "/v1/gaen/exposednextday"
+    ],
+    "spiderOptions": {},
+    "detectedFrameworks": [
+      "SPRING_BOOT",
+      "SPRING"
+    ]
+  },
+  "exceptionPolicy": {
+    "policy": [
+      {
+        "enabled": true,
+        "responsePolicy": {
+          "responseMatcher": "CODE_STARTS_WITH",
+          "code": 2
+        }
+      },
+      {
+        "enabled": true,
+        "responsePolicy": {
+          "responseMatcher": "CODE_STARTS_WITH",
+          "code": 4
+        }
+      },
+      {
+        "enabled": true,
+        "responsePolicy": {
+          "code": 302
+        }
+      },
+      {
+        "enabled": true,
+        "exceptionPolicy": {
+          "Exception": "java.lang.IllegalArgumentException",
+          "exceptionStrategy": "STACKTRACE_CONTAINS",
+          "content": "org.springframework.web.util.UriComponentsBuilder"
+        }
+      }
+    ]
+  },
+  "jars": [
+    "dpppt-backend-sdk/dpppt-backend-sdk-ws/target/dpppt-backend-sdk-ws.jar"
+  ]
+}
