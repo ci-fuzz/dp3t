@@ -17,7 +17,7 @@ import com.codeintelligence.static_analysis.EndpointDetection;
 import javax.annotation.PostConstruct;
 
 @Component
-public class FuzzTarget_AllController {
+public class AllController {
 
     @Autowired
     private WebApplicationContext _webCtx;

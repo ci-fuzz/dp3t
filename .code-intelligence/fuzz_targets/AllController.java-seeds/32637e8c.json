@@ -1,17 +1,11 @@
 {
   "name": "32637e8c",
   "fileName": ".",
-  "fileContent": null,
   "requestChain": {
     "requests": [
       {
         "method": "GET",
         "uri": "/v1/gaen/exposed/%FUZZ%1606989600000?publishedafter=%FUZZ%1606989600000",
-        "headers": {
-        },
-        "contentType": "TEXT_HTML",
-        "body": "",
-        "isFixed": false,
         "webControllerId": "1497032917"
       }
     ]
