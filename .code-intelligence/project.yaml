@@ -18,7 +18,7 @@ run_container: "cifuzz/builders:maven"
 
 ## Paths to the fuzz tests to execute
 fuzz_tests:
-  - .code-intelligence/fuzz_targets/FuzzTarget_AllController.java
+  - .code-intelligence/fuzz_targets/AllController.java
 
 ## The sanitizers to use for the fuzz tests
 ## By default, only address sanitizer is used.
@@ -35,7 +35,6 @@ fuzz_tests:
 ## The run time after which the fuzz tests are cancelled and
 ## considered as having passed. Default value is 30 minutes.
 runtime: "30m0s"
-
 ## The number of parallel executions per fuzz test
 # parallel_executions: 1
 
