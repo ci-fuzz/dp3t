@@ -3,7 +3,7 @@
   "displayName": "FuzzAllEndPoints",
   "maxRunTime": "7200s",
   "fuzzTargets": [
-    "LmNvZGUtaW50ZWxsaWdlbmNlL2Z1enpfdGFyZ2V0cy9GdXp6VGFyZ2V0X0FsbENvbnRyb2xsZXIuamF2YQ=="
+    "LmNvZGUtaW50ZWxsaWdlbmNlL2Z1enpfdGFyZ2V0cy9BbGxDb250cm9sbGVyLmphdmE="
   ],
   "fuzzerRunConfigurations": [
     {
