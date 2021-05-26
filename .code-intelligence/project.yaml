@@ -20,6 +20,9 @@ run_container: "cifuzz/builders:maven"
 fuzz_tests:
   - .code-intelligence/fuzz_targets/AllController.java
 
+## Paths to web app fuzz target configs
+web_app_target_configs:
+
 ## The sanitizers to use for the fuzz tests
 ## By default, only address sanitizer is used.
 # sanitizers:
