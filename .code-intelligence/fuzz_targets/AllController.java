@@ -39,7 +39,7 @@ public class AllController {
         System.getProperties().put("logging.level.org.springframework.web", "error");
         String[] springBootArgs = {};
         try {
-            Application.main(springBootArgs);
+            StartWebGoat.main(springBootArgs);
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException("Failed to start application.");
